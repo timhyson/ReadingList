@@ -2,23 +2,22 @@
 
   <section class="row well live-preview">
     <aside class="col-sm-3">
-      <a href="http://www.amazon.com/gp/product/0553593714">
-        <img
-        ng-src="http://images.amazon.com/images/P/0553593714.01.ZTZZZZZZ.jpg"
-        alt="Cover of Book Title" class="full">
+      <a href="http://www.amazon.com/gp/product/{{reviewFormCtrl.book.isbn}}">
+        <img ng-src="http://images.amazon.com/images/P/{{reviewFormCtrl.book.isbn}}.01.ZTZZZZZZ.jpg"
+        alt="Cover of {{reviewFormCtrl.book.title}}" class="full">
       </a>
-      <p>5/5</p>
+      <p>{{reviewFormCtrl.book.rating}}/5</p>
     </aside>
 
     <div class="col-sm-9">
       <h3>
-        <a href="http://www.amazon.com/gp/product/0553593714">
-          Title of Book
+        <a href="http://www.amazon.com/gp/product/{{reviewFormCtrl.book.isbn}}">
+        {{reviewFormCtrl.book.title}}
         </a>
       </h3>
-      <cite class="text-muted">Written by Author</cite>
+      <cite class="text-muted">Written by {{reviewFormCtrl.book.author}}</cite>
 
-      <p>No review yet.</p>
+      <p>{{reviewFormCtrl.book.review}}</p>
 
       <ul class="list-unstyled">
         <li>
@@ -32,34 +31,37 @@
     <fieldset class="form-group">
     <label for="title" class="col-sm-2 control-label">Title:</label>
     <span class="col-sm-9">
-      <input type="text" class="form-control" id="title" placeholder="Book Title">
+      <input type="text" class="form-control" id="title" placeholder="Book Title" ng-model="reviewFormCtrl.book.title">
     </span>
     </fieldset>
 
     <fieldset class="form-group">
     <label for="isbn" class="control-label col-sm-2">ISBN:</label>
     <span class="col-sm-9">
-      <input type="text" id="isbn" class="form-control" maxLength="10" placeholder="ISBN-10">
+      <input type="text" id="isbn" class="form-control" maxLength="10"
+      placeholder="ISBN-10" ng-model="reviewFormCtrl.book.isbn">
     </span>
     </fieldset>
 
     <fieldset class="form-group">
     <label class="control-label col-sm-2" for="author">Author</label>
     <span class="col-sm-9">
-      <input type="text" id="author" class="form-control" placeholder="Name of the Author"></span>
+      <input type="text" id="author" class="form-control" placeholder="Name of the Author" ng-model="reviewFormCtrl.book.author"></span>
     </fieldset>
 
     <fieldset class="form-group">
       <label class="control-label col-sm-2" for="review">Review</label>
       <span class="col-sm-9">
-        <textarea id="review" class="form-control" cols="30" rows="3" placeholder="Book Review"></textarea>
+        <textarea id="review" class="form-control" cols="30" rows="3"
+          placeholder="Book Review" ng-model="reviewFormCtrl.book.review"></textarea>
       </span>
     </fieldset>
 
     <fieldset class="form-group">
       <label for="rating" class="control-label col-sm-2">Rating:</label>
       <span class="col-sm-9">
-        <select class="form-control" id="rating" value="5">
+        <select class="form-control" id="rating" value="5"
+        ng-model="reviewFormCtrl.book.rating">
           <option>5</option>
           <option>4</option>
           <option>3</option>

@@ -6,15 +6,14 @@
   !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Cancel" : "Create
   Review"}}</button>
   <hr />
-  <review-form ng-show="reviewFormCtrl.showForm"></review-form>
+  <review-form books="readingListCtrl.books" genres="readingListCtrl.genres" ng-show="reviewFormCtrl.showForm"></review-form>
   <hr />
 
   <ul class="list-unstyled col-sm-8">
     <li class="book row" ng-repeat="book in readingListCtrl.books">
       <book-cover></book-cover>
       <div class="col-sm-9">
-        <h3><a
-           href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a></h3>
+        <h3><a href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a></h3>
 
         <cite class="text-muted">Written by {{book.author}}</cite>
 
