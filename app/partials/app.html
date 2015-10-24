@@ -2,9 +2,11 @@
 
 <div class="row" ng-controller="ReadingListController as readingListCtrl">
 
-  <button class="btn btn-default">Create Review</button>
+  <button class="btn btn-default" ng-click="reviewFormCtrl.showForm =
+  !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Cancel" : "Create
+  Review"}}</button>
   <hr />
-  <review-form></review-form>
+  <review-form ng-show="reviewFormCtrl.showForm"></review-form>
   <hr />
 
   <ul class="list-unstyled col-sm-8">
