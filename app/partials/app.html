@@ -24,14 +24,7 @@
 
         <p>{{book.review}}</p>
 
-        <ul class="list-unstyled">
-          <!-- Note 4 -->
-          <li>
-            <span class="label label-primary" ng-repeat="(genre, state) in
-              book.genres" ng-show="state">{{genre}}</span>
-          </li>
-        </ul>
-
+        <book-genres></book-genres>
       </div>
     </li>
   </ul>
