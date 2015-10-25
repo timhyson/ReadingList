@@ -1,9 +1,5 @@
 <ul class="list-unstyled">
-  <!-- Note 4 -->
-  <li>
-    <span class="label label-primary" ng-repeat="(genre, state) in book.genres" 
-ng-show="state">{{genre}}</span>
+  <li ng-repeat="(genre, state) in genres" ng-show="state">
+    <span class="label label-primary">{{genre}}</span>
   </li>
 </ul>
-
-
