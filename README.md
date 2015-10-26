@@ -22,7 +22,7 @@ Clone the angular-seed repository using [git][git]:
 
 ```
 git clone https://github.com/timhyson/ReadingList.git
-cd angular-seed
+cd ReadingList
 ```
 
 
