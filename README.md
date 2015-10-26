@@ -60,12 +60,22 @@ app/                    --> all of the source files for the application
 
 For more information on the AngularJS components used in this application please check out http://angularjs.org/
 
-[git]: http://git-scm.com/
-[bower]: http://bower.io
-[npm]: https://www.npmjs.org/
-[node]: http://nodejs.org
-[protractor]: https://github.com/angular/protractor
-[jasmine]: http://jasmine.github.io
-[karma]: http://karma-runner.github.io
-[travis]: https://travis-ci.org/
-[http-server]: https://github.com/nodeapps/http-server
+[codeschool] (https://www.codeschool.com/screencasts/soup-to-bits-shaping-up-with-angular-js)
+
+[git] (http://git-scm.com/)
+
+[bower] (http://bower.io)
+
+[npm] (https://www.npmjs.org/)
+
+[node] (http://nodejs.org)
+
+[protractor] (https://github.com/angular/protractor)
+
+[jasmine] (http://jasmine.github.io)
+
+[karma] (http://karma-runner.github.io)
+
+[travis] (https://travis-ci.org/)
+
+[http-server] (https://github.com/nodeapps/http-server)
